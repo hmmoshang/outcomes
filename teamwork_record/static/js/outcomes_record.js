@@ -13,7 +13,7 @@ window.addEventListener('load', function () {
     var phours = [];
     var pcounts = [];
     var target = document.querySelector('#target');
-    target.addEventListener('dragenter', function () {
+     target.addEventListener('dragenter', function () {
         this.classList.remove('hover');
     });
     target.addEventListener('dragleave', function () {
