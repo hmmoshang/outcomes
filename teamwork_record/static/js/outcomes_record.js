@@ -121,6 +121,8 @@ window.addEventListener('load', function () {
         format: 'YYYY-MM-DD'
     });
     $('.complete').click(function () {
+        $('#target').empty();
+        $('#target').addClass('hover');
         var data = $('tr').length;
         for (i = 1; i < data; i++) {
             var pname = $('tr:eq(' + i + ")").find('td:eq(0)').text();
