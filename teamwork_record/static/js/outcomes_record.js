@@ -128,13 +128,13 @@ window.addEventListener('load', function () {
             var pcontent = $('tr:eq(' + i + ")").find('td:eq(2)').text();
             var phour = $('tr:eq(' + i + ")").find('td:eq(3)').text();
             var pcount = $('tr:eq(' + i + ")").find('td:eq(4)').text();
-            phour = phour.substring(0, phour.length - 1);
-            pcount = pcount.substring(0, pcount.length - 1);
+            // phour = phour.substring(0, phour.length - 1);
+            // pcount = pcount.substring(0, pcount.length - 1);
             pnames.push(pname);
             pprojects.push(pproject);
             pcontents.push(pcontent);
             phours.push(phour);
-            console.info(pcount);
+            // console.info(pcount);
             pcounts.push(pcount)
         }
         var start_time = $('#ranges02').val().substr(0, 10);
