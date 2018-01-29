@@ -24,20 +24,18 @@ excel表格这里，我写的还不太灵活，不能保证适用于所有的exc
 ## 技术介绍：
 
 ### 1. 后台用到了django框架
-- 数据库配置部分，我使用的是mysql数据库
-数据库这块挺坑的，说几点需要注意的：
-  1. 中文写入数据库,这需要最开始就在创建数据库的时候就设置好：
-`CREATE DATABASE 'databasename' DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
-  2. 数据库时间的时区部分，mysql数据默认的是utc时区，一般比本地事件差8个小时：
-设置`USE_TZ = False`
-- django 这个框架就不说了，把我的资源部分跟大家讲讲：
+- 数据库配置部分，我使用的是mysql数据库,数据库这块挺坑的，说几点需要注意的：
+  1. 中文写入数据库,这需要最开始就在创建数据库的时候就设置好：  
+  `CREATE DATABASE 'databasename' DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
+  2. 数据库时间的时区部分，mysql数据默认的是utc时区，一般比本地事件差8个小时：  
+  设置`USE_TZ = False`
+- django 这个框架就不说了，把我的资源部分跟大家讲讲:  
 outcomes文件夹中：
 ```
 settings.py :这个文件配数据库，添加应用，添加中间件，设置时区，添加静态文件等等。
 urls.py :这个文件配url接口。
-```
-teamwork_record文件夹中：
-这个文件夹就是我的工程项目了
+```  
+teamwork_record文件夹中：这个文件夹就是我的工程项目了
 ```
 static文件夹放置静态资源，css,js文件等
 migrations文件夹大家不需要管是自动生成数据库相关内容等
@@ -49,7 +47,6 @@ views.py后台文件
 ### 3. 前端js用jquery,js这里也有需要注意的部分：
 拖动事件需要禁用浏览器的默认事件，之前没有禁用的时候，浏览器都会把提交文件默认为下载
 ## 使用说明：
-
 废话了一大推，到了最重要的部分，如何使用我的系统
 ### step1: 把我的项目pull下来到本地
 ### step2: 本地创建数据库
