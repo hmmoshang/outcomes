@@ -29,7 +29,7 @@ excel表格这里，我写的还不太灵活，不能保证适用于所有的exc
   `CREATE DATABASE 'databasename' DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
   2. 数据库时间的时区部分，mysql数据默认的是utc时区，一般比本地事件差8个小时：  
   设置`USE_TZ = False`
-- django 这个框架就不说了，把我的资源部分跟大家讲讲:  
+- django 这个框架就不说了，把我的资源部分跟大家讲讲:
 outcomes文件夹中：
 ```
 settings.py :这个文件配数据库，添加应用，添加中间件，设置时区，添加静态文件等等。
@@ -51,7 +51,7 @@ views.py后台文件
 ### step1: 把我的项目pull下来到本地
 ### step2: 本地创建数据库
 终端登陆数据库后  
-`CREATE DATABASE 'databasename' DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
+`CREATE DATABASE 'databasename' DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`  
 这里的databasename要和数据库配置中的name部分一样，如果你看不懂这句话，你就把那俩都设置成outcomes就可以了
 ### step3: 修改数据库信息
 找到outcomes文件夹中的settings.py文件中的数据库部分
