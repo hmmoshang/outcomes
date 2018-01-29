@@ -50,7 +50,7 @@ views.py后台文件
 废话了一大推，到了最重要的部分，如何使用我的系统
 ### step1: 把我的项目pull下来到本地
 ### step2: 本地创建数据库
-终端登陆数据库后
+终端登陆数据库后  
 `CREATE DATABASE 'databasename' DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
 这里的databasename要和数据库配置中的name部分一样，如果你看不懂这句话，你就把那俩都设置成outcomes就可以了
 ### step3: 修改数据库信息
@@ -69,9 +69,9 @@ DATABASES = {
 ```
 把相关信息改成你自己的
 ### step3: 合并数据表
-终端运行
-python manage.py makemigrations
+终端运行  
+python manage.py makemigrations  
 python manage.py migrate
-#大功告成，试试吧！
+## 大功告成，试试吧！
 
 
