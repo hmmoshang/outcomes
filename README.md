@@ -35,7 +35,7 @@ excel表格这里，我写的还不太灵活，不能保证适用于所有的exc
 settings.py :这个文件配数据库，添加应用，添加中间件，设置时区，添加静态文件等等。
 urls.py :这个文件配url接口。
 ```  
- teamwork_record文件夹中：这个文件夹就是我的工程项目了
+  teamwork_record文件夹中：这个文件夹就是我的工程项目了
 ```
 static文件夹放置静态资源，css,js文件等
 migrations文件夹大家不需要管是自动生成数据库相关内容等
