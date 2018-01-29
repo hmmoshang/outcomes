@@ -71,7 +71,8 @@ DATABASES = {
 ### step3: 合并数据表
 终端运行  
 python manage.py makemigrations  
-python manage.py migrate
+python manage.py migrate  
+python manage.py runserver
 ## 大功告成，试试吧！
 
 
