@@ -7,7 +7,7 @@
 ## 项目介绍：
 
 先上张图，不要吐槽审美哈，凑合看一下。
-![你的网去找小青蛙了]{http://github.com/hmmoshang/outcomes/teamwork_record/static/pic.jpg}
+![你的网去找小青蛙了]{https://github.com/hmmoshang/outcomes/blob/master/teamwork_record/static/pic.jpg}
 这张图就是系统界面了，很简单，三个步骤就可以使用系统：
 
 ### 1. 左上角：选择上传时间
