@@ -127,14 +127,14 @@ window.addEventListener('load', function () {
             var pproject = $('tr:eq(' + i + ")").find('td:eq(1)').text();
             var pcontent = $('tr:eq(' + i + ")").find('td:eq(2)').text();
             var phour = $('tr:eq(' + i + ")").find('td:eq(3)').text();
-            phour = phour.substring(0, phour.length - 1);
             var pcount = $('tr:eq(' + i + ")").find('td:eq(4)').text();
+            phour = phour.substring(0, phour.length - 1);
             pcount = pcount.substring(0, pcount.length - 1);
             pnames.push(pname);
-
             pprojects.push(pproject);
             pcontents.push(pcontent);
             phours.push(phour);
+            console.info(pcount);
             pcounts.push(pcount)
         }
         var start_time = $('#ranges02').val().substr(0, 10);
@@ -155,10 +155,12 @@ window.addEventListener('load', function () {
             },
             success: function (response) {
                 alert('提交成功');
+                console.info(response);
                 console.info('你真棒')
             },
             error: function (response) {
-                alert('你是不是又没选时间啊我的老天爷')
+                alert('你是不是又没选时间啊我的老天爷');
+                console.info(response);
                 console.info('再试试')
             }
         })
