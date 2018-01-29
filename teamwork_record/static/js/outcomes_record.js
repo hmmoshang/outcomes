@@ -69,12 +69,14 @@ window.addEventListener('load', function () {
                     var key = '' + c + row;
                     var pre_key = '' + c + (row - 1);
                     var td = document.createElement('td');
-                    if ((sheet[key] == null) && (sheet[next] == null) && (sheet[pre_key] == null)) {
+                    if ((sheet[key] == null) && (sheet[next] == null) && (sheet[pre_key] == null) && (col != 65)&& (col != 69)) {
+                        // console.info(col)
                         break
                     }
                     if ((sheet[key] == null) && (col == 65 || 69)) {
-                        console.info(pre_key)
+                        // console.info(pre_key)
                         td.innerHTML = sheet[pre_key]['w'];
+                        sheet[key] = sheet[pre_key];
                     } else {
                         td.innerHTML = sheet[key]['w'];
                     }
@@ -84,26 +86,26 @@ window.addEventListener('load', function () {
                 table.appendChild(tr);
             }
             document.querySelector('#target').appendChild(table);
-            var init = 2;
-            for (i = 0; i < rows.length; i++) {
-                var end = rows[i];
-                var c = end + 1;
-                for (q = init; q < c; q++) {
-                    var project = '' + String.fromCharCode(66) + q;
-                    var content = '' + String.fromCharCode(67) + q;
-                    var during = '' + String.fromCharCode(68) + q;
-                    projects.push(sheet[project]['w']);
-                    contents.push(sheet[content]['w']);
-                    durings.push(sheet[during]['w']);
-                }
-                outcomes_records[i].project = projects;
-                outcomes_records[i].content = contents;
-                outcomes_records[i].during = durings;
-                projects = [];
-                contents = [];
-                durings = [];
-                init = c;
-            }
+            // var init = 2;
+            // for (i = 0; i < rows.length; i++) {
+            //     var end = rows[i];
+            //     var c = end + 1;
+            //     for (q = init; q < c; q++) {
+            //         var project = '' + String.fromCharCode(66) + q;
+            //         var content = '' + String.fromCharCode(67) + q;
+            //         var during = '' + String.fromCharCode(68) + q;
+            //         projects.push(sheet[project]['w']);
+            //         contents.push(sheet[content]['w']);
+            //         durings.push(sheet[during]['w']);
+            //     }
+            //     outcomes_records[i].project = projects;
+            //     outcomes_records[i].content = contents;
+            //     outcomes_records[i].during = durings;
+            //     projects = [];
+            //     contents = [];
+            //     durings = [];
+            //     init = c;
+            // }
 
         };
         reader.readAsBinaryString(f);

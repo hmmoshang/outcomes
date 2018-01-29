@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'outcomes.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'outcomes',
-        'USER': 'root',
-        'PASSWORD': 'newpass',
+        'NAME': 'databasename',
+        'USER': 'username',
+        'PASSWORD': 'password',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
