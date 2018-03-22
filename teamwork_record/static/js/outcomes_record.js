@@ -156,6 +156,11 @@ window.addEventListener('load', function () {
             },
             success: function (response) {
                 alert('提交成功');
+                 pnames.length = 0;
+                pcontents.length = 0;
+                pprojects.length = 0;
+                phours.length = 0;
+                pcounts.length = 0;
                 console.info(response);
                 console.info('你真棒')
             },
