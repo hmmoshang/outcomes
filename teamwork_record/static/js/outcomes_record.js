@@ -47,7 +47,8 @@ window.addEventListener('load', function () {
             }
 
             for (var row = 1; ; row++) {
-                if ((sheet['A' + row] == null) && (sheet['B' + row] == null)) {
+                if ((sheet['A' + row] == null) && (sheet['B' + row] == null)&&(sheet['C' + row] == null)) {
+                    console.info(row)
                     break;
                 }
                 var tr = document.createElement('tr');
@@ -69,8 +70,8 @@ window.addEventListener('load', function () {
                     var key = '' + c + row;
                     var pre_key = '' + c + (row - 1);
                     var td = document.createElement('td');
-                    if ((sheet[key] == null) && (sheet[next] == null) && (sheet[pre_key] == null) && (col != 65)&& (col != 69)) {
-                        // console.info(col)
+                    if ((sheet[key] == null) && (sheet[next] == null) && (sheet[pre_key] == null) && (col != 65)&& (col != 69)&& (col != 66)) {
+                        console.info(col)
                         break
                     }
                     if ((sheet[key] == null) && (col == 65 || 69)) {
@@ -121,8 +122,6 @@ window.addEventListener('load', function () {
         format: 'YYYY-MM-DD'
     });
     $('.complete').click(function () {
-        $('#target').empty();
-        $('#target').addClass('hover');
         var data = $('tr').length;
         for (i = 1; i < data; i++) {
             var pname = $('tr:eq(' + i + ")").find('td:eq(0)').text();
@@ -166,7 +165,7 @@ window.addEventListener('load', function () {
                 console.info('再试试')
             }
         })
-
+        $('#target').empty();
+        $('#target').addClass('hover');
     })
 });
-
